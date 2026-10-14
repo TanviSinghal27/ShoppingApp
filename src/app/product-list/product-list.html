@@ -1,0 +1,16 @@
+<div class="product-container">
+  <h2>Products Catalog</h2>
+
+  @for (product of products(); track product.id) {
+  <div class="product-item"
+    style="display: flex; justify-content: space-between; margin-bottom: 10px; padding: 5px; border-bottom: 1px dashed #ccc;">
+    <span><strong>{{ product.name }}</strong> - ₹{{ product.price }}</span>
+    <button (click)="addToCart(product)"
+      style="cursor: pointer; background: #28a745; color: white; border: none; padding: 4px 8px; border-radius: 4px;">
+      Add to Cart
+    </button>
+  </div>
+  } @empty {
+  <p>No products available right now.</p>
+  }
+</div>

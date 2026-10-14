@@ -1,5 +1,7 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { ProductList } from './product-list/product-list';
+import { CartComponent } from './cart/cart';
 
 @Component({
   imports: [RouterOutlet],

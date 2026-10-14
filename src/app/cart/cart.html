@@ -1,0 +1,17 @@
+<div class="cart-container" style="background-color: #f9f9f9; padding: 15px; border-radius: 5px;">
+  <h2>Cart</h2>
+  <div class="divider">-------------------------</div>
+
+  @if (cartItems().length === 0) {
+  <div>Your cart is empty.</div>
+  } @else {
+  @for (item of cartItems(); track $index) {
+  <div class="cart-item" style="margin: 5px 0;">
+    <span>{{ item.name }} ₹{{ item.price }}</span>
+  </div>
+  }
+
+  <div class="divider" style="margin: 10px 0; color: #888;">-------------------------</div>
+  <h3>Total: ₹{{ totalValue() }}</h3>
+  }
+</div>
